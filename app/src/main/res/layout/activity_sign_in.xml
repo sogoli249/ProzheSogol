@@ -10,7 +10,7 @@
         android:textAlignment="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="صفحه ثبت نام جدید"
+        android:text="وارد شدن"
         android:textSize="36sp"
 
         />
@@ -22,7 +22,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/edtSignUpUserName"
+            android:id="@+id/edtSignInUserName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
@@ -40,7 +40,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/edtSignUpPassword"
+            android:id="@+id/edtSignInPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
@@ -67,24 +67,15 @@
 
         <Button
             android:layout_marginTop="50dp"
-            android:id="@+id/btnSignUpSabtNum"
+            android:id="@+id/btnSignIn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
             android:gravity="center_vertical|center_horizontal"
-            android:text="ثبت نام"
+            android:text="وارد شوید"
             android:textSize="20sp" />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/txtGoToSignIn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="حساب دارید؟ وارد شوید..."
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="20sp" />
 
 </LinearLayout>
