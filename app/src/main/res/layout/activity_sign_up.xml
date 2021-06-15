@@ -11,9 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="صفحه ثبت نام جدید"
-        android:textSize="36sp"
-
-        />
+        android:textSize="36sp" />
 
 
     <LinearLayout
@@ -41,11 +39,12 @@
 
         <EditText
             android:id="@+id/edtSignUpPassword"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
+            android:gravity="fill_horizontal"
             android:hint="پسورد را وارد کنید"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:lines="1"
             android:selectAllOnFocus="true"
             android:textDirection="rtl"/>
@@ -84,7 +83,7 @@
         android:layout_height="wrap_content"
         android:text="حساب دارید؟ وارد شوید..."
         android:textAlignment="center"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@android:color/black"
         android:textSize="20sp" />
 
 </LinearLayout>
