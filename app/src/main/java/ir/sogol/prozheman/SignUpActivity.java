@@ -12,13 +12,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class SignUpActivity extends AppCompatActivity {
-    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         EditText editUseName = (EditText) findViewById(R.id.edtSignUpUserName);
         EditText editPassword = (EditText) findViewById(R.id.edtSignUpPassword);
@@ -37,7 +38,7 @@ public class SignUpActivity extends AppCompatActivity {
                 sharedPreferences.edit().putBoolean("login", true).apply();
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
 
             }

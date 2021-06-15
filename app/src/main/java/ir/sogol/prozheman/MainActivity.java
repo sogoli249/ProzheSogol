@@ -10,13 +10,14 @@ import android.preference.PreferenceManager;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+    SharedPreferences sharedPreferences;
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         TextView txtWelcome = (TextView) findViewById(R.id.txtMain);
 

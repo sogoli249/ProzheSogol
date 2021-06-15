@@ -13,12 +13,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignInActivity extends AppCompatActivity {
-    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         EditText editUseName = (EditText) findViewById(R.id.edtSignInUserName);
         EditText editPassword = (EditText) findViewById(R.id.edtSignInPassword);
@@ -40,7 +42,7 @@ public class SignInActivity extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext() , "خوش اومدین" , Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext() , MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
 
                 } else {
